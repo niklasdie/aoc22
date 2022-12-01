@@ -1,4 +1,4 @@
-import aocd
+from aocd.models import Puzzle
 
 ex_in = """1000
 2000
@@ -16,7 +16,9 @@ ex_in = """1000
 10000"""
 
 if __name__ == '__main__':
-    or_in = aocd.get_data(day=1, year=2022)
+    # variant with Puzzle
+    puzzle = Puzzle(year=2022, day=1)
+    or_in = puzzle.input_data
     in_arr = or_in.split("\n")
     sum_list = []
     last_i = 0
@@ -24,4 +26,5 @@ if __name__ == '__main__':
         if in_arr[i] == "":
             sum_list.append(sum(int(in_arr[x]) for x in range(last_i, i)))
             last_i = i+1
-    aocd.submit(answer=max(sum_list), part="a", day=1, year=2022)
+    puzzle.answer_a = max(sum_list)
+
