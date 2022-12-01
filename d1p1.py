@@ -1,20 +1,5 @@
 from aocd.models import Puzzle
 
-ex_in = """1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000"""
-
 if __name__ == '__main__':
     # variant with Puzzle
     puzzle = Puzzle(year=2022, day=1)

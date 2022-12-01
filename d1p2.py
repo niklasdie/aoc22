@@ -1,20 +1,5 @@
 import aocd
 
-ex_in = """1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000"""
-
 if __name__ == '__main__':
     # variant with get_data and submit
     or_in = aocd.get_data(day=1, year=2022)
